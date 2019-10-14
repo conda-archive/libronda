@@ -26,7 +26,7 @@ struct RepodataInfo {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-struct Repodata {
+pub struct Repodata {
     info: RepodataInfo,
     packages: HashMap<String, Record>,
     #[serde(rename = "packages.conda")]
@@ -56,6 +56,7 @@ pub fn read_repodata<P: AsRef<Path>>(path: P) -> Result<Repodata> {
 #[cfg(test)]
 mod tests {
     use std::path::PathBuf;
+    use pretty_assertions::{assert_eq, assert_ne};
     use super::*;
 
     #[test]

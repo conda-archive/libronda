@@ -11,3 +11,7 @@ serde = "*"
 serde_derive = "*"
 serde_json = "*"
 graphlib = "*"
+version-compare = { path = "../version-compare" }
+
+[dev-dependencies]
+pretty_assertions = "*"
