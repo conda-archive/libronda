@@ -37,7 +37,7 @@ impl<'a> Version<'a> {
     /// # Examples
     ///
     /// ```
-    /// use version_compare::{CompOp, Version};
+    /// use libronda::{CompOp, Version};
     ///
     /// let ver = Version::from("1.2.3").unwrap();
     ///
@@ -55,7 +55,7 @@ impl<'a> Version<'a> {
     /// # Examples
     ///
     /// ```
-    /// use version_compare::{CompOp, Version, conda_parser};
+    /// use libronda::{CompOp, Version, conda_parser};
     ///
     /// let ver = Version::parse("1.2.3", &conda_parser).unwrap();
     ///
@@ -79,7 +79,7 @@ impl<'a> Version<'a> {
     /// # Examples
     ///
     /// ```
-    /// use version_compare::Version;
+    /// use libronda::Version;
     ///
     /// let ver = Version::from("1.2.3").unwrap();
     ///
@@ -95,7 +95,7 @@ impl<'a> Version<'a> {
     /// # Examples
     ///
     /// ```
-    /// use version_compare::{Version, VersionPart};
+    /// use libronda::{Version, VersionPart};
     ///
     /// let ver = Version::from("1.2.3").unwrap();
     ///
@@ -118,7 +118,7 @@ impl<'a> Version<'a> {
     /// # Examples
     ///
     /// ```
-    /// use version_compare::{Version, VersionPart};
+    /// use libronda::{Version, VersionPart};
     ///
     /// let ver = Version::from("1.2.3").unwrap();
     ///
@@ -137,7 +137,7 @@ impl<'a> Version<'a> {
     /// # Examples
     ///
     /// ```
-    /// use version_compare::Version;
+    /// use libronda::Version;
     ///
     /// let ver_a = Version::from("1.2.3").unwrap();
     /// let ver_b = Version::from("1.2.3.4").unwrap();
@@ -162,7 +162,7 @@ impl<'a> Version<'a> {
     /// # Examples:
     ///
     /// ```
-    /// use version_compare::{CompOp, Version};
+    /// use libronda::{CompOp, Version};
     ///
     /// assert_eq!(Version::from("1.2").unwrap().compare(&Version::from("1.3.2").unwrap()), CompOp::Lt);
     /// assert_eq!(Version::from("1.9").unwrap().compare(&Version::from("1.9").unwrap()), CompOp::Eq);
@@ -182,7 +182,7 @@ impl<'a> Version<'a> {
     /// # Examples:
     ///
     /// ```
-    /// use version_compare::{CompOp, Version};
+    /// use libronda::{CompOp, Version};
     ///
     /// assert!(Version::from("1.2").unwrap().compare_to(&Version::from("1.3.2").unwrap(), &CompOp::Lt));
     /// assert!(Version::from("1.2").unwrap().compare_to(&Version::from("1.3.2").unwrap(), &CompOp::Le));
@@ -338,7 +338,7 @@ mod tests {
         // A value outside the range must return an error
         assert!(ver.part(n_parts).is_err());
     }
-    parametrize_versions!(part)
+    parametrize_versions!(part);
 
     fn parts(v_string: &str, n_parts: usize) {
         // The number of parts must match

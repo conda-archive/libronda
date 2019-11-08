@@ -27,7 +27,7 @@ impl VersionCompare {
     /// # Examples
     ///
     /// ```
-    /// use version_compare::{CompOp, VersionCompare};
+    /// use libronda::{CompOp, VersionCompare};
     ///
     /// // Compare version numbers
     /// assert_eq!(VersionCompare::compare("1.2.3", "1.2.3"), Ok(CompOp::Eq));
@@ -56,7 +56,7 @@ impl VersionCompare {
     /// # Examples
     ///
     /// ```
-    /// use version_compare::{CompOp, VersionCompare};
+    /// use libronda::{CompOp, VersionCompare};
     ///
     /// // Compare version numbers
     /// assert!(VersionCompare::compare_to("1.2.3", "1.2.3", &CompOp::Eq).unwrap());

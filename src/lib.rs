@@ -7,6 +7,8 @@
 #[macro_use] extern crate lazy_static;
 #[cfg(test)]
 #[macro_use] extern crate rstest;
+#[cfg(test)]
+#[macro_use] extern crate paste;
 
 mod version;
 mod repodata;
